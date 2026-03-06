@@ -1,0 +1,463 @@
+/* ==============================
+   Global Styles
+============================== */
+
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74c3c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f6fa;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ==============================
+   Navigation Styles
+============================== */
+
+.navbar {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.navbar-light .nav-link {
+    color: #000000 !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #000000 !important;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+    color: #000000 !important;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #000000 !important;
+}
+
+/* ==============================
+   Hero Section
+============================== */
+
+.animate-fade-in {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.waves {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.parallax > use {
+    animation: splice 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 8s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 9s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 10s;
+}
+
+@keyframes splice {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ==============================
+   Section Styles
+============================== */
+
+section {
+    transition: all 0.3s ease;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #2d3436;
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* ==============================
+   Buttons
+============================== */
+
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(78, 115, 223, 0.3);
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #4e73df;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-light {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.btn-outline-light:focus,
+.btn-outline-light:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    color: #ffffff;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+/* ==============================
+   Testimonial Cards
+============================== */
+
+/* ==============================
+   Utilities
+============================== */
+
+.rounded-lg {
+    border-radius: 12px !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-info {
+    color: var(--info-color) !important;
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.opacity-25 {
+    opacity: 0.25 !important;
+}
+
+.opacity-90 {
+    opacity: 0.9 !important;
+}
+
+/* ==============================
+   Footer Styles
+============================== */
+
+footer {
+    background: linear-gradient(135deg, #2d3436 0%, #1e272e 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+footer a {
+    color: #b2bec3;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+footer h5, footer h6 {
+    color: #ffffff;
+}
+
+footer .text-muted {
+    color: #b2bec3 !important;
+}
+
+/* ==============================
+   Responsive Styles
+============================== */
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .display-5 {
+        font-size: 2rem !important;
+    }
+
+    .lead {
+        font-size: 1rem !important;
+    }
+
+    .waves {
+        height: 60px;
+    }
+
+    .navbar-nav {
+        gap: 1rem;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    footer .row {
+        text-align: center !important;
+    }
+
+    footer .col-md-6:first-child {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ==============================
+   Form Styles
+============================== */
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.15);
+}
+
+/* ==============================
+   Scrollbar Styles
+============================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4e73df;
+    border-radius: 5px;
+}
+
+/* ==============================
+   Badge Styles
+============================== */
+
+.badge {
+    padding: 0.35rem 0.65rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* ==============================
+   Portfolio Styles
+============================== */
+
+.portfolio-avatar {
+    animation: float 3s ease-in-out infinite;
+    border: 5px solid var(--primary-color);
+}
+
+.portfolio-hero {
+    position: relative;
+}
+
+.project-card {
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: var(--primary-color);
+}
+
+.skill-item {
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    padding-left: 10px;
+}
+
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 8px;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    transition: width 0.6s ease;
+}
+
+.contact-icon {
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.contact-info {
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(78, 115, 223, 0.1) !important;
+}
+
+.social-link {
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.social-link:hover {
+    background-color: var(--primary-color) !important;
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+
+/* Sticky Sidebar */
+@media (max-width: 991px) {
+
+
+
+}
