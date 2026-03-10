@@ -46,6 +46,8 @@
 
                         <tr>
 
+                        <!--xss protection -->
+
                             <td><?= html_escape($post->title) ?></td>
 
                             <td>
